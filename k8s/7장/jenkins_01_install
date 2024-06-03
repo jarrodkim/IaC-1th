@@ -1,0 +1,33 @@
+## 리포지터리 업데이트
+# apt update
+
+## JDK 설치
+# java --verison
+root@test01-virtual-machine:~# java --version
+명령어 'java' 을(를) 찾을 수 없습니다. 그러나 다음을 통해 설치할 수 있습니다:
+# apt install -y openjdk-17-jre-headless
+
+## JDK 버전 확인 
+# java -version
+
+## 젠킨스 설치용 키 
+# wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+## 젠킨스 리포지터리 설치 
+# echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+## 위치 확인
+# ls /etc/apt/sources.list.d/
+jenkins.list 
+
+## 
+# cat /etc/apt/sources.list.d/jenkins.list
+
+## 젠킨스 리포지터리 업데이트
+# apt update
+
+## 젠킨스 설치
+# apt install jenkins
+
+## 젠킨스 설치 확인
+# systemctl status jenkins 
