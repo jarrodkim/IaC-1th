@@ -20,8 +20,9 @@ root@test01-virtual-machine:~# java --version
 # ls /etc/apt/sources.list.d/
 jenkins.list 
 
-## 
+## 내용 확인 
 # cat /etc/apt/sources.list.d/jenkins.list
+deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/
 
 ## 젠킨스 리포지터리 업데이트
 # apt update
